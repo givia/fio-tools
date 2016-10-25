@@ -2,7 +2,7 @@ FROM ubuntu:14.10
 MAINTAINER <Ryan Wallner ryan.wallner@clusterhq.com>
 
 RUN sed -i -e 's/archive.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
-RUN apt-get -y update && apt-get -y install fio ceph-common wget python2.7 gnuplot
+RUN apt-get -y update && apt-get -y install fio librbd1 ceph-common wget python2.7 gnuplot
 
 # Check ENV vars
 ADD check.sh /opt/check.sh
